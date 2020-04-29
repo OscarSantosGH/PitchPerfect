@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecordSoundViewController: UIViewController {
 
     @IBOutlet weak var recordLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
