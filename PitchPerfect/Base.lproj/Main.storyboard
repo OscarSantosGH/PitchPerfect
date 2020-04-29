@@ -77,18 +77,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-Ab-ZRI">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="228.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXu-Gj-wtv" userLabel="Fast Button">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gn-II-BSO" userLabel="Slow Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="228.5"/>
-                                                <state key="normal" image="Fast"/>
-                                                <connections>
-                                                    <action selector="playSoundButton:" destination="O5R-Ky-jjw" eventType="touchUpInside" id="WaF-wy-Al9"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gn-II-BSO" userLabel="Slow Button">
-                                                <rect key="frame" x="191" y="0.0" width="191" height="228.5"/>
                                                 <state key="normal" image="Slow"/>
                                                 <connections>
                                                     <action selector="playSoundButton:" destination="O5R-Ky-jjw" eventType="touchUpInside" id="xqF-6W-qfK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXu-Gj-wtv" userLabel="Fast Button">
+                                                <rect key="frame" x="191" y="0.0" width="191" height="228.5"/>
+                                                <state key="normal" image="Fast"/>
+                                                <connections>
+                                                    <action selector="playSoundButton:" destination="O5R-Ky-jjw" eventType="touchUpInside" id="WaF-wy-Al9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
