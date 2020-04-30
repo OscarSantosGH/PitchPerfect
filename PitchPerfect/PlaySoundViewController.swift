@@ -11,6 +11,8 @@ import AVFoundation
 
 class PlaySoundViewController: UIViewController {
     
+    //MARK: Outlets
+    
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
     @IBOutlet weak var rabbitButton: UIButton!
@@ -18,6 +20,8 @@ class PlaySoundViewController: UIViewController {
     @IBOutlet weak var echoButton: UIButton!
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    
+    //MARK: Properties
     
     var recordedAudioURL:URL!
     var audioFile:AVAudioFile!
@@ -40,12 +44,15 @@ class PlaySoundViewController: UIViewController {
         setButtonImageContentMode(buttons: snailButton, chipmunkButton, rabbitButton, vaderButton, echoButton, reverbButton)
     }
     
+    // setButtonImageContentMode is a handy Variadic function to fix the squished images on iPhone SE landscape
     func setButtonImageContentMode(buttons:UIButton...){
         for button in buttons{
             button.contentMode = .center
             button.imageView?.contentMode = .scaleAspectFit
         }
     }
+    
+    //MARK: playSoundButton IBAction
     
     @IBAction func playSoundButton(_ sender: UIButton){
         switch(ButtonType(rawValue: sender.tag)!) {
@@ -65,6 +72,8 @@ class PlaySoundViewController: UIViewController {
 
         configureUI(.playing)
     }
+    
+    //MARK: stopButtonPressed IBAction
     
     @IBAction func stopButtonPressed(_ sender: AnyObject){
         stopAudio()
