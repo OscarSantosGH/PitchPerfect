@@ -1,18 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "Icon-41.png",
+      "filename" : "Icon-40.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "60.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
-      "filename" : "Icon-Small@2x-1.png",
+      "filename" : "Icon-Small@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
@@ -48,6 +49,7 @@
       "size" : "60x60"
     },
     {
+      "filename" : "20.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "20x20"
@@ -65,13 +67,13 @@
       "size" : "29x29"
     },
     {
-      "filename" : "Icon-Small@2x.png",
+      "filename" : "Icon-Small@2x-2.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "Icon-40.png",
+      "filename" : "Icon-41.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
@@ -101,6 +103,7 @@
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "appstore.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

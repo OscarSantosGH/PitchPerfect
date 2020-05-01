@@ -47,6 +47,7 @@ class PlaySoundViewController: UIViewController {
     // setButtonImageContentMode is a handy Variadic function to fix the squished images on iPhone SE landscape
     func setButtonImageContentMode(buttons:UIButton...){
         for button in buttons{
+            // This solution was found on StackOverflow (https://stackoverflow.com/questions/38697032/how-to-center-an-image-inside-an-uibutton-without-stretching-in-both-direction-i)
             button.contentMode = .center
             button.imageView?.contentMode = .scaleAspectFit
         }
