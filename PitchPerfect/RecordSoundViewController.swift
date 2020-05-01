@@ -19,36 +19,23 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder: AVAudioRecorder!
     
-    // RecordStatus is used to check the status of the recording
-    enum RecordStatus{
-        case isRecording
-        case readyToRecord
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         stopRecordButton.isEnabled = false
     }
     
     // UpdateUI take a RecordStatus parameter to update the UI
-    func updateUI(status:RecordStatus){
-        switch status {
-        case .isRecording:
-            recordLabel.text = "Recording in Progress"
-            stopRecordButton.isEnabled = true
-            recordButton.isEnabled = false
-        default:
-            stopRecordButton.isEnabled = false
-            recordButton.isEnabled = true
-            recordLabel.text = "Tap to Record"
-        }
+    func updateUI(isRecording:Bool){
+        recordLabel.text = isRecording ? "Recording in Progress" : "Tap to Record"
+        stopRecordButton.isEnabled = isRecording
+        recordButton.isEnabled = !isRecording
     }
     
     //MARK: recordButton IBAction
     
     @IBAction func recordButtonTap(_ sender: Any) {
         // Updating the UI
-        updateUI(status: .isRecording)
+        updateUI(isRecording: true)
         
         // Getting the file path to save the recorded audio
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
@@ -72,7 +59,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func stopButtonTap(_ sender: Any) {
         // Updating the UI
-        updateUI(status: .readyToRecord)
+        updateUI(isRecording: false)
         
         // Stopping the recording
         audioRecorder.stop()
@@ -100,6 +87,4 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
             destinationVC.recordedAudioURL = recordedAudioURL
         }
     }
-    
 }
-
